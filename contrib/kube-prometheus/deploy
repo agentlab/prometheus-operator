@@ -17,7 +17,7 @@ kctl() {
     kubectl --namespace "$NAMESPACE" "$@"
 }
 
-kctl apply -f manifests/prometheus-operator
+kctl apply -f manifests/prometheus-operator.yaml
 
 # Wait for CRDs to be ready.
 printf "Waiting for Operator to register custom resource definitions..."
